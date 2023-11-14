@@ -38,6 +38,29 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Name</th>
+      <th scope="col">city</th>
+      <th scope="col">age</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach ($students as $stu)
+    <tr>
+      <td>{{ $stu->id }}</th>
+      <td>{{ $stu->name }}</td>
+      <td>{{ $stu->city }}</td>
+      <td>{{ $stu->age }}</td>
+      <td><button type="button" class="btn btn-primary">Edit</button></td>
+      <td><button type="button" class="btn btn-danger">Delete</button></td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
     </div>
 
 
